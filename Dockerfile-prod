@@ -46,4 +46,4 @@ EXPOSE 8070
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
 
 # Configure a healthcheck to validate that everything is up&running
-HEALTHCHECK --interval=5s --timeout=3s CMD curl --silent --fail http://127.0.0.1:8071/fpm-ping || kill 1
+HEALTHCHECK --interval=5s --timeout=3s CMD curl --silent --fail http://127.0.0.1:8071/fpm-ping
